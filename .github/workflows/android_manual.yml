@@ -20,7 +20,7 @@ jobs:
         with:
           channel: 'stable'
       - run: git clone ${{ github.event.inputs.gitlink }} blabla
-      - run: cd blabla
+      - run: mv  -v blabla/* .
       - run: flutter pub get
       - run: flutter build apk
       - uses: actions/upload-artifact@v1
